@@ -27,7 +27,7 @@ export class GcpFileReader implements IResourceRead {
 
     let fileContents = '';
 
-    const readStream = remoteFile.createReadStream();
+    const readStream = remoteFile.createReadStream({validation: false});
 
     readStream.setEncoding('utf8');
 
